@@ -1,0 +1,7 @@
+.product-detail {
+    height: auto;
+    max-height: 620px;
+    overflow-y: scroll;
+    width: 360px;
+    margin-top: 76px;
+}

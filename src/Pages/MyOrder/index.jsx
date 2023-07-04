@@ -1,5 +1,7 @@
+import { Layout } from "../../Components/Layout";
+
 function MyOrder() {
-    return <>MyOrder</>;
+    return <Layout>MyOrder</Layout>;
 }
 
 export default MyOrder;
