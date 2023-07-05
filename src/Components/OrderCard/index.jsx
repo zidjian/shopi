@@ -4,7 +4,8 @@ import { useContext } from "react";
 import { ShopiContext } from "../../Context";
 
 export function OrderCard({ datos }) {
-    const { carrito, setCarrito, carritoContador, setCarritoContador } = useContext(ShopiContext);
+    const { carrito, setCarrito, carritoContador, setCarritoContador } =
+        useContext(ShopiContext);
     OrderCard.propTypes = {
         datos: PropTypes.object.isRequired,
     };

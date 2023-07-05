@@ -13,6 +13,7 @@ export function ShopiProvider({ children }) {
     const [producto, setProducto] = useState({});
     const [carrito, setCarrito] = useState([]);
     const [estadoCarrito, setEstadoCarrito] = useState(false);
+    const [orden, setOrden] = useState([]);
 
 
     function toggleDetallesProducto(estado) {
@@ -51,7 +52,9 @@ export function ShopiProvider({ children }) {
                 carrito,
                 setCarrito,
                 estadoCarrito,
-                toggleCarrito
+                toggleCarrito,
+                orden,
+                setOrden
             }}
         >
             {children}
