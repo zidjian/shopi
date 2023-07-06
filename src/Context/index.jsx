@@ -14,7 +14,6 @@ export function ShopiProvider({ children }) {
         getProductos(setProductos);
     }, []);
 
-    const [carritoContador, setCarritoContador] = useState(0);
     const [estadoDellatesProducto, setEstadoDellatesProducto] = useState(false);
     const [producto, setProducto] = useState({});
     const [carrito, setCarrito] = useState([]);
@@ -48,8 +47,6 @@ export function ShopiProvider({ children }) {
     return (
         <ShopiContext.Provider
             value={{
-                carritoContador,
-                setCarritoContador,
                 toggleDetallesProducto,
                 estadoDellatesProducto,
                 producto,

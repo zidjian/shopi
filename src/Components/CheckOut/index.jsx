@@ -18,14 +18,15 @@ export function CheckOut() {
     // const { title, price, images = [], description } = carrito;
 
     function manejadorCheckout() {
-        const anadirOrden = {
-            fecha: "04-07-2023",
-            productos: carrito,
-            cantidad_productos: carrito.length,
-            total: precioTotal(carrito),
-        };
-        setOrden([...orden, anadirOrden]);
-        setCarrito([]);
+            const anadirOrden = {
+                fecha: "04-07-2023",
+                productos: carrito,
+                cantidad_productos: carrito.length,
+                total: precioTotal(carrito),
+            };
+            setOrden([...orden, anadirOrden]);
+            setCarrito([]);
+            toggleCarrito(false)
     }
 
     return (

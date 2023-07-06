@@ -8,8 +8,6 @@ export function Card({ datos }) {
         datos: PropTypes.object.isRequired,
     };
     const {
-        carritoContador,
-        setCarritoContador,
         toggleDetallesProducto,
         setProducto,
         carrito,
@@ -21,7 +19,6 @@ export function Card({ datos }) {
     function agregarCarrito(evento, datosProducto) {
         evento.stopPropagation();
         setCarrito([...carrito, datosProducto]);
-        setCarritoContador(carritoContador + 1);
         toggleCarrito(true);
         toggleDetallesProducto(false);
     }

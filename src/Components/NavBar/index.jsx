@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 import { ShopiContext } from "../../Context";
 
 export function NavBar() {
-    const {carritoContador} = useContext(ShopiContext)
+    const {carrito} = useContext(ShopiContext)
 
     const activeStyle = "underline underline-offset-4";
 
@@ -107,7 +107,7 @@ export function NavBar() {
                         Sign In
                     </NavLink>
                 </li>
-                <li className="flex items-center"><ShoppingCartIcon className="w-6 h-6 text-black mr-2" /> ({carritoContador})</li>
+                <li className="flex items-center"><ShoppingCartIcon className="w-6 h-6 text-black mr-2" /> ({carrito.length})</li>
             </ul>
         </nav>
     );
