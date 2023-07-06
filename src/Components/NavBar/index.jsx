@@ -26,7 +26,7 @@ export function NavBar() {
                 </li>
                 <li className="">
                     <NavLink
-                        to="clothes"
+                        to="/clothes"
                         className={({ isActive }) =>
                             isActive ? activeStyle : undefined
                         }

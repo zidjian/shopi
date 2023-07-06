@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
-import { createContext, useState } from "react";
+import { createContext, useEffect, useState } from "react";
+import { getProductos } from "../Components/Services/productos.services";
 
 export const ShopiContext = createContext();
 
@@ -7,6 +8,11 @@ export function ShopiProvider({ children }) {
     ShopiProvider.propTypes = {
         children: PropTypes.node.isRequired,
     };
+    const [productos, setProductos] = useState();
+
+    useEffect(() => {
+        getProductos(setProductos);
+    }, []);
 
     const [carritoContador, setCarritoContador] = useState(0);
     const [estadoDellatesProducto, setEstadoDellatesProducto] = useState(false);
@@ -15,13 +21,12 @@ export function ShopiProvider({ children }) {
     const [estadoCarrito, setEstadoCarrito] = useState(false);
     const [orden, setOrden] = useState([]);
 
-
     function toggleDetallesProducto(estado) {
-        if(estado) {
+        if (estado) {
             setEstadoDellatesProducto(true);
             return;
         }
-        if(!estado) {
+        if (!estado) {
             setEstadoDellatesProducto(false);
             return;
         }
@@ -29,11 +34,11 @@ export function ShopiProvider({ children }) {
     }
 
     function toggleCarrito(estado) {
-        if(estado) {
+        if (estado) {
             setEstadoCarrito(true);
             return;
         }
-        if(!estado) {
+        if (!estado) {
             setEstadoCarrito(false);
             return;
         }
@@ -54,7 +59,8 @@ export function ShopiProvider({ children }) {
                 estadoCarrito,
                 toggleCarrito,
                 orden,
-                setOrden
+                setOrden,
+                productos,
             }}
         >
             {children}

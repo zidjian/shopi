@@ -10,7 +10,6 @@ function MyOrder() {
     let {id} = useParams();
     if(id === "last") {
         id = orden.length - 1;
-        console.log(id)
     }
     return (
         <Layout>

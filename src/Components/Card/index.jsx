@@ -22,13 +22,11 @@ export function Card({ datos }) {
         evento.stopPropagation();
         setCarrito([...carrito, datosProducto]);
         setCarritoContador(carritoContador + 1);
-        console.log(carrito);
         toggleCarrito(true);
         toggleDetallesProducto(false);
     }
 
     function verificarProductoAgregado(id) {
-        // console.log(carrito);
         const estado =
             carrito.filter((producto) => producto.id === id).length > 0;
         if (estado) {

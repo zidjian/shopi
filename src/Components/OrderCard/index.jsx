@@ -20,7 +20,7 @@ export function OrderCard({ datos }) {
     }
 
     return (
-        <div className="flex justify-between items-center">
+        <div className="flex justify-between items-center gap-4">
             <div className="flex items-center gap-4">
                 <figure className="w-16 h-16">
                     <img
