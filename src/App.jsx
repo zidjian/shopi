@@ -24,7 +24,7 @@ const AppRutas = () => {
             element: <MyOrder />,
         },
         {
-            path: "/my-order/last",
+            path: "/my-order/:id",
             element: <MyOrder />,
         },
         {
