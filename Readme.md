@@ -1,8 +1,4 @@
-<div style="width: 40px; height: auto; margin: 0 auto" >
-
-![Logo del proyecto](./public/logo.svg)  
-
-</div>  
+<img src="./public/logo.svg" alt="Logo de shopi" width="32" height="32">
 
 <hr />
 
@@ -22,7 +18,7 @@ E-commerce Basico con carrito de compras
 - `Funcionalidad 2:` Agregar productos al carrito de compras
 - `Funcionalidad 3:` Filtrado por categoria y busqueda de productos por titulo
 ## Acceso al proyecto
-[Demo](https://aluraflix-phi-five.vercel.app/)
+[Demo](https://shopi-three.vercel.app/)
 ## Tecnologías utilizadas
 - React
 - Vite
