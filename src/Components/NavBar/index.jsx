@@ -21,7 +21,7 @@ export function NavBar() {
                             isActive ? activeStyle : undefined
                         }
                     >
-                        All
+                        Todos
                     </NavLink>
                 </li>
                 <li className="">
@@ -31,7 +31,7 @@ export function NavBar() {
                             isActive ? activeStyle : undefined
                         }
                     >
-                        Clothes
+                        Ropa
                     </NavLink>
                 </li>
                 <li className="">
@@ -41,27 +41,27 @@ export function NavBar() {
                             isActive ? activeStyle : undefined
                         }
                     >
-                        Electronics
+                        Electrodomesticos
                     </NavLink>
                 </li>
                 <li className="">
                     <NavLink
-                        to="forniture"
+                        to="furniture"
                         className={({ isActive }) =>
                             isActive ? activeStyle : undefined
                         }
                     >
-                        Forniture
+                        Muebles
                     </NavLink>
                 </li>
                 <li className="">
                     <NavLink
-                        to="toys"
+                        to="shoes"
                         className={({ isActive }) =>
                             isActive ? activeStyle : undefined
                         }
                     >
-                        Toys
+                        Zapatillas
                     </NavLink>
                 </li>
                 <li className="">
@@ -71,7 +71,7 @@ export function NavBar() {
                             isActive ? activeStyle : undefined
                         }
                     >
-                        Others{" "}
+                        Otros
                     </NavLink>
                 </li>
             </ul>
@@ -84,7 +84,7 @@ export function NavBar() {
                             isActive ? activeStyle : undefined
                         }
                     >
-                        My orders
+                        Mis ordenes
                     </NavLink>
                 </li>
                 <li className="">
@@ -94,17 +94,17 @@ export function NavBar() {
                             isActive ? activeStyle : undefined
                         }
                     >
-                        My account
+                        Mi cuenta
                     </NavLink>
                 </li>
-                <li className="rounded-md bg-cyan-600 py-2 px-5 text-white">
+                <li>
                     <NavLink
                         to="sign-in"
                         className={({ isActive }) =>
                             isActive ? activeStyle : undefined
                         }
                     >
-                        Sign In
+                        Iniciar Sesión
                     </NavLink>
                 </li>
                 <li className="flex items-center"><ShoppingCartIcon className="w-6 h-6 text-black mr-2" /> ({carrito.length})</li>

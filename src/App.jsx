@@ -8,6 +8,7 @@ import NotFound from "./Pages/NotFound";
 import { NavBar } from "./Components/NavBar";
 import { ShopiProvider } from "./Context";
 import { CheckOut } from "./Components/CheckOut";
+import SignUp from "./Pages/SignUp";
 
 const AppRutas = () => {
     const rutas = useRoutes([
@@ -38,6 +39,10 @@ const AppRutas = () => {
         {
             path: "/sign-in",
             element: <SignIn />,
+        },
+        {
+            path: "/sign-up",
+            element: <SignUp />,
         },
         {
             path: "*",
