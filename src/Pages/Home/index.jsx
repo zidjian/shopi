@@ -2,7 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import { Card } from "../../Components/Card";
 import { Layout } from "../../Components/Layout";
 import { ProductDetail } from "../../Components/ProductDetail";
-import { ShopiContext } from "../../Context";
+import { ShopiContext } from "../../Context/Global";
 import { useParams } from "react-router-dom";
 
 function Home() {
@@ -90,7 +90,7 @@ function Home() {
                 onChange={(evento) => setBuscador(evento.target.value)}
                 className="font-light py-4 px-6 border border-black rounded-lg mb-4"
             />
-            <div className="grid grid-cols-4 gap-8">{vista()}</div>
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">{vista()}</div>
             <ProductDetail />
         </Layout>
     );

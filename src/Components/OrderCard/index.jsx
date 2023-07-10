@@ -1,7 +1,7 @@
 import { TrashIcon } from "@heroicons/react/24/outline";
 import PropTypes from "prop-types";
 import { useContext } from "react";
-import { ShopiContext } from "../../Context";
+import { ShopiContext } from "../../Context/Global";
 
 export function OrderCard({ datos }) {
     const { carrito, setCarrito } =

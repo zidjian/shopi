@@ -1,6 +1,7 @@
 import PropTypes from "prop-types";
 import { createContext, useEffect, useState } from "react";
-import { getProductos } from "../Components/Services/productos.services";
+import { getProductos } from "../../Components/Services/productos.services";
+import { useLocalStorage } from "../../Hooks/useLocalStorage";
 
 export const ShopiContext = createContext();
 
@@ -19,6 +20,14 @@ export function ShopiProvider({ children }) {
     const [carrito, setCarrito] = useState([]);
     const [estadoCarrito, setEstadoCarrito] = useState(false);
     const [orden, setOrden] = useState([]);
+    const { cuenta, registro, estadoSesion, validarSesion } = useLocalStorage();
+    const [validado, setValidado] = useState(validarSesion());
+
+    function cerrraSesion() {
+        estadoSesion(false);
+        setValidado(validarSesion())
+        setValidado(false)
+    }
 
     function toggleDetallesProducto(estado) {
         if (estado) {
@@ -58,6 +67,13 @@ export function ShopiProvider({ children }) {
                 orden,
                 setOrden,
                 productos,
+                cuenta,
+                registro,
+                estadoSesion,
+                validarSesion,
+                validado,
+                setValidado,
+                cerrraSesion
             }}
         >
             {children}

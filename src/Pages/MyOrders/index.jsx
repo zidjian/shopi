@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { Layout } from "../../Components/Layout";
-import { ShopiContext } from "../../Context";
+import { ShopiContext } from "../../Context/Global";
 import { OrdersCard } from "../../Components/OrdersCard";
 
 export default function MyOrders() {

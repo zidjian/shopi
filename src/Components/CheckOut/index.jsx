@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { ShopiContext } from "../../Context";
+import { ShopiContext } from "../../Context/Global";
 import "./estilos.css";
 import { XCircleIcon } from "@heroicons/react/24/solid";
 import { OrderCard } from "../OrderCard";

@@ -6,35 +6,60 @@ import MyOrders from "./Pages/MyOrders";
 import SignIn from "./Pages/SignIn";
 import NotFound from "./Pages/NotFound";
 import { NavBar } from "./Components/NavBar";
-import { ShopiProvider } from "./Context";
+import { ShopiProvider } from "./Context/Global";
 import { CheckOut } from "./Components/CheckOut";
 import SignUp from "./Pages/SignUp";
+import Auth from "./Context/Auth/Auth";
 
 const AppRutas = () => {
     const rutas = useRoutes([
         {
             path: "/",
-            element: <Home />,
+            element: (
+                <Auth>
+                    <Home />
+                </Auth>
+            ),
         },
         {
             path: "/:category",
-            element: <Home />,
+            element: (
+                <Auth>
+                    <Home />
+                </Auth>
+            ),
         },
         {
             path: "/my-account",
-            element: <MyAccount />,
+            element: (
+                <Auth>
+                    <MyAccount />
+                </Auth>
+            ),
         },
         {
             path: "/my-order",
-            element: <MyOrder />,
+            element: (
+                <Auth>
+                    \<MyOrder />
+                </Auth>
+            ),
         },
         {
             path: "/my-order/:id",
-            element: <MyOrder />,
+            element: (
+                <Auth>
+                    <MyOrder />
+                </Auth>
+            ),
         },
         {
             path: "/my-orders",
-            element: <MyOrders />,
+            element: (
+                <Auth>
+                    <MyOrders />
+                </Auth>
+            ),
         },
         {
             path: "/sign-in",

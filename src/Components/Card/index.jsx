@@ -1,7 +1,7 @@
 import { PlusIcon, CheckIcon } from "@heroicons/react/24/solid";
 import PropTypes from "prop-types";
 import { useContext } from "react";
-import { ShopiContext } from "../../Context";
+import { ShopiContext } from "../../Context/Global";
 
 export function Card({ datos }) {
     Card.propTypes = {
@@ -47,7 +47,7 @@ export function Card({ datos }) {
 
     return (
         <div
-            className="bg-white cursor-pointer w-56 h-60"
+            className="bg-white cursor-pointer max-w-full w-56 h-60"
             onClick={() => {
                 toggleDetallesProducto(true);
                 toggleCarrito(false);
