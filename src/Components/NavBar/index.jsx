@@ -4,7 +4,7 @@ import { NavLink, useNavigate } from "react-router-dom";
 import { ShopiContext } from "../../Context/Global";
 
 export function NavBar() {
-    const { carrito, cuenta, validado, cerrraSesion } =
+    const { carrito, cuenta, validado, cerrraSesion, toggleCarrito } =
         useContext(ShopiContext);
     const navegador = useNavigate();
     const [menu, setMenu] = useState(false);
@@ -131,12 +131,15 @@ export function NavBar() {
                         </NavLink>
                     </li>
                 )}
-                <li className="" onClick={() => toggleMenu()}>
-                    <Bars3Icon className="w-6 h-6 text-black mr-2 lg:hidden" />
-                </li>
-                <li className="flex items-center">
+                <li
+                    onClick={() => toggleCarrito()}
+                    className="flex items-center"
+                >
                     <ShoppingCartIcon className="w-6 h-6 text-black mr-2" /> (
                     {carrito.length})
+                </li>
+                <li className="" onClick={() => toggleMenu()}>
+                    <Bars3Icon className="w-6 h-6 text-black mr-2 lg:hidden" />
                 </li>
             </ul>
             <ul

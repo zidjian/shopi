@@ -30,11 +30,11 @@ export function ShopiProvider({ children }) {
     }
 
     function toggleDetallesProducto(estado) {
-        if (estado) {
+        if (estado === true) {
             setEstadoDellatesProducto(true);
             return;
         }
-        if (!estado) {
+        if (estado === false) {
             setEstadoDellatesProducto(false);
             return;
         }
@@ -42,11 +42,11 @@ export function ShopiProvider({ children }) {
     }
 
     function toggleCarrito(estado) {
-        if (estado) {
+        if (estado === true) {
             setEstadoCarrito(true);
             return;
         }
-        if (!estado) {
+        if (estado === false) {
             setEstadoCarrito(false);
             return;
         }
